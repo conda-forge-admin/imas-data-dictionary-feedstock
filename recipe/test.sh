@@ -14,7 +14,7 @@ else
     echo "IMAS_VERSION is not set correctly"
     exit 1
 fi
-if [[ "${IMAS_PREFIX}/include/IDSDef.xml" == "$(idsinfo idspath)" ]]; then
+if [[ "$(realpath "$(eval echo "${IMAS_PREFIX}/include/IDSDef.xml")")" == "$(realpath "$(idsinfo idspath)")" ]]; then
     echo "IMAS_PREFIX is set correctly"
 else
     echo "IMAS_PREFIX is not set correctly"
