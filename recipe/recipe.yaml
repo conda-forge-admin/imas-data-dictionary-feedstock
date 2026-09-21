@@ -19,7 +19,7 @@ build:
   noarch: python
   python:
     entry_points:
-      - idsinfo = data_dictionary.idsinfo:main
+      - idsinfo = imas_data_dictionary.idsinfo:main
       - dd_doc = imas_data_dictionary.dd_doc:main
 
 requirements:
