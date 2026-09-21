@@ -20,10 +20,7 @@ build:
   python:
     entry_points:
       - idsinfo = data_dictionary.idsinfo:main
-  files:
-    include: ["**"]
-    exclude:
-      - dd_${{ version }}/share/
+      - dd_doc = imas_data_dictionary.dd_doc:main
 
 requirements:
   build:
@@ -45,7 +42,7 @@ requirements:
 tests:
   - python:
       imports:
-        - data_dictionary
+        - imas_data_dictionary
       python_version:
         - ${{ python_min }}.*
         - "*"
